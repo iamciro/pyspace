@@ -1,12 +1,6 @@
-from flask import Flask
+from pyspace import create_app
 
-app = Flask(__name__)
-
-
-@app.route('/')
-def home():
-    return '<h1>Hello world</h1>'
-
+app = create_app()
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
