@@ -217,8 +217,15 @@
         </div>
       </div>
       {% else %}
-        <h2>429 error</h2>
-        <p>Not possible to get launches from the API.</p>
+        <div class="row">
+          <div class="col-6">
+            <img class="img-fluid" src="{{ url_for('static', filename='img/error/429.jpg') }}" alt="">
+          </div>
+          <div class="col-6">
+            <h2>429 error</h2>
+            <p>Not possible to get launches from the API.</p>
+          </div>
+        </div>
       {% endif %}
 
 
