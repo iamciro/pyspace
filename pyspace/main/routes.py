@@ -6,6 +6,7 @@ main = Blueprint('main', __name__, template_folder="templates")
 
 @main.route('/')
 def home():
-    launches = get_space_launches()
-    print(launches)
+    launches = get_space_launches(10)
+    if launches:
+        return render_template('index.html', launches=launches)
     return render_template('index.html')
