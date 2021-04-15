@@ -7,14 +7,14 @@ import json
 from datetime import datetime
 
 
-def convert_str_to_datatime(str_value):
+def convert_str_to_datetime(str_value):
     '''
         Converts a string to a datime with the
         %Y-%m-%d %H:%M:%S format.
     '''
     # Format string
     str_value = str_value.replace('T', ' ').replace('Z', '')
-    # Convert to datetime
+    # Convert string to datetime
     datetime_value = datetime.strptime(str_value, '%Y-%m-%d %H:%M:%S')
     return datetime_value
 
