@@ -81,7 +81,10 @@
                   <strong>LSP:</strong> {{ launch.lsp_name }}
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted">9 mins</small>
+                  {% set launch_date = convert_str_to_datetime(launch.window_start) %}
+                  <small class="text-muted">
+                    Launch date: {{ launch_date }}
+                  </small>
                 </div>
               </div>
             </div>
