@@ -4,6 +4,19 @@ blueprint.
 """
 import requests
 import json
+from datetime import datetime
+
+
+def convert_str_to_datatime(str_value):
+    '''
+        Converts a string to a datime with the
+        %Y-%m-%d %H:%M:%S format.
+    '''
+    # Format string
+    str_value = str_value.replace('T', ' ').replace('Z', '')
+    # Convert to datetime
+    datetime_value = datetime.strptime(str_value, '%Y-%m-%d %H:%M:%S')
+    return datetime_value
 
 
 def get_space_launches(limit=10):
